@@ -1,23 +1,25 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { ArrowDownToLine, CheckCircle, Leaf } from "lucide";
 import Link from "next/link";
+import { FiArrowDown } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
+import { BiLoaderAlt } from "react-icons/bi";
 
 const perks = [
   {
     name: "Instant Delivery",
-    Icon:   ArrowDownToLine,
+    icon:   FiArrowDown,
     description: "Get cement delivered to your doorway in seconds and keep working without worries."
   },
   {
     name: "Guaranteed Quality",
-    Icon:   CheckCircle,
+    icon:   FiCheckCircle,
     description: "Every cement sold on our platform is verified and certified by the Rwanda Standard Board."
   },
   {
-    name: "For the Planet",
-    Icon:   Leaf,
-    description: "We've pledged 1% of sales to the preservation and restoration of environment."
+    name: "Tackable Purchace",
+    icon:   BiLoaderAlt,
+    description: "You are capable of tracking your order throught it's journey until you recieve it."
   },
 ];
 
@@ -51,7 +53,7 @@ export default function Home() {
                 className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                 <div className="md:flex-shrink-0 flex justify-center">
                   <div className="h-16 w-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-900">
-                    {<perk.Icon className='w-1/3 h-1/3' />}
+                    {<perk.icon className='w-1/3 h-1/3' />}
                   </div>
                 </div>
                 
